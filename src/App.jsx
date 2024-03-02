@@ -7,7 +7,9 @@ function App() {
 	useEffect(() => {
 		const fetchQuote = async () => {
 			try {
-				const response = await fetch("https://zenquotes.io/api/random");
+				const response = await fetch(
+					"https://corsproxy.io/?https://zenquotes.io/api/random"
+				);
 				if (!response.ok) {
 					throw new Error("Failed to fetch quote");
 				}
